@@ -10,3 +10,8 @@ with open('reviews.txt', 'r') as f:
 
 print('已讀取完成，資料一共有', len(data), '筆')
 
+sum_len = 0
+for word in data:
+	sum_len += len(word)
+
+print('已計算完成，每筆留言平均有', sum_len/len(data), '個字')
