@@ -15,3 +15,17 @@ for word in data:
 	sum_len += len(word)
 
 print('已計算完成，每筆留言平均有', sum_len/len(data), '個字')
+
+new = []
+for d in data:
+    if len(d) < 100:
+        new.append(d)
+print('裡面一共有', len(new), '筆資料長度小於100')
+
+good = []
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('留言裡有', len(good), '筆評價有提到good')
+print(good[0])
+print(good[1])
